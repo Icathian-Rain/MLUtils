@@ -41,7 +41,12 @@ class Logs:
             self.logger.info(msg)
         else:
             raise ValueError("tag and scalar_values should be the same type")
-        
+    
+    def info(self, msg):
+        self.logger.info(msg)
+    
+    def error(self, msg):
+        self.logger.error(msg)
 
 if __name__ == "__main__":
     logger = getLogger("test")
